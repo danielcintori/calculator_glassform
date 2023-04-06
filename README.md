@@ -9,3 +9,4 @@ Cada botão é uma tag span com uma classe num que adiciona um valor específico
 O script "vanilla-tilt.js" adiciona o efeito de inclinação ao contêiner da calculadora usando a biblioteca VanillaTilt.
 
 
+<img src="https://github.com/danielcintori/calculator_glassform/blob/main/Screenshot_2023-04-06_02-51-41.png" />
