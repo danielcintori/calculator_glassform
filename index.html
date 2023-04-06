@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Incluindo o arquivo de estilo -->
+<link rel="stylesheet" href="style.css">
+
+<!-- Definindo o título da página -->
+<title>Calculadora de vidro</title>
+</head>
+<body>
+    <!-- Definindo a seção que envolve a calculadora -->
+    <section class="container">
+
+    <!-- Definindo o formulário que contém a calculadora -->
+    <form class="calculator" name="calc">
+
+        <!-- Caixa de texto para exibir o valor da expressão -->
+        <input type="text" readonly class="value" name="txt" />
+
+        <!-- Botão para limpar a caixa de texto -->
+        <span class="num clear" onclick="calc.txt.value = ''">c</span>
+
+        <!-- Botão para adicionar o operador de divisão -->
+        <span class="num" onclick="calc.txt.value += '/'">/</span>
+
+        <!-- Botão para adicionar o operador de multiplicação -->
+        <span class="num" onclick="calc.txt.value += '*'">*</span>
+
+        <!-- Botões numéricos -->
+        <span class="num" onclick="calc.txt.value += '7'">7</span>
+        <span class="num" onclick="calc.txt.value += '8'">8</span>
+        <span class="num" onclick="calc.txt.value += '9'">9</span>
+        <span class="num" onclick="calc.txt.value += '-'">-</span>
+        <span class="num" onclick="calc.txt.value += '4'">4</span>
+        <span class="num" onclick="calc.txt.value += '5'">5</span>
+        <span class="num" onclick="calc.txt.value += '6'">6</span>
+        <span class="num plus" onclick="calc.txt.value += '+'">+</span>
+        <span class="num" onclick="calc.txt.value += '1'">1</span>
+        <span class="num" onclick="calc.txt.value += '2'">2</span>
+        <span class="num" onclick="calc.txt.value += '3'">3</span>
+        <span class="num" onclick="calc.txt.value += '0'">0</span>
+        <span class="num" onclick="calc.txt.value += '00'">00</span>
+        <span class="num" onclick="calc.txt.value += '.'">.</span>
+
+        <!-- Botão para calcular o resultado da expressão -->
+        <span class="num equal" onclick="calc.txt.value =eval(calc.txt.value)">=</span>
+    </form>
+</section>
+
+<!-- Incluindo a biblioteca VanillaTilt -->
+<script type="text/javascript" src="vanilla-tilt.js"></script>
+
+<!-- Inicializando a biblioteca VanillaTilt com as opções desejadas -->
+<script type="text/javascript">
+    VanillaTilt.init(document.querySelector(".container"), {
+        max: 15,
+        speed: 400,
+        glare: true,
+        "max-glare": .2,
+    });
+</script>
+</body>
+</html>
